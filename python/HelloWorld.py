@@ -1,6 +1,13 @@
-from mc import *
-import time
+# os specific code
+import sys
+if sys.platform == 'darwin':
+    from mc import *
+    mc = Minecraft()
+else:
+    from mcpi.minecraft import *
+    mc = Minecraft.create()
+# end os specific code
 
-mc = Minecraft()
+import time
 mc.postToChat("Hello kids")
-time.sleep(5)
+time.sleep(1)
