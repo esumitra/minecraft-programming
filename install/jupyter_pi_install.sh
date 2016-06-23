@@ -9,7 +9,7 @@ sudo apt-get -y install python-requests python-pil python-scrapy python-geopy py
 # pip installs
 yes | sudo pip install -U pip
 yes | sudo pip install bottleneck rtree
-yes | sudo pip install jupyter geopandas
+yes | sudo pip install jupyter
 yes | sudo pip install backports_abc jsonschema singledispatch ipykernel
 
 # run with 'jupyter notebook'
