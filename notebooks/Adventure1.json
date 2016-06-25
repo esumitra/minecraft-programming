@@ -1,0 +1,156 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Welcome to Programming Adventures in Minecraft\n",
+    "![Image of Minecraft](https://minecraft.net/static/pages/img/header-banner1.33f7482083dc.jpg)\n",
+    "\n",
+    "\n",
+    "Programming software is fun and what better way to learn than to do things in Minecraft!\n",
+    "Here are some things you can do with Minecraft programming\n",
+    "\n",
+    "* Send a chat message to Alex \n",
+    "  Programmers call this \"Hello World\" \n",
+    "* Teleport Steve to a secret location\n",
+    "* ...\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "import sys\n",
+    "sys.path.append('/Users/esumitra/workspaces/mc/mcpipy')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Send a chat message\n",
+    "Lets write our first program to send a message to the Player\n",
+    "\n",
+    "\n",
+    "Start up minecraft and type the following in a new cell\n",
+    "```\n",
+    "import mcpi.minecraft\n",
+    "import time\n",
+    "mc = minecraft.Minecraft.create()\n",
+    "mc.postToChat(\"Hello kids\")\n",
+    "time.sleep(5)\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "# Start typing below\n",
+    "# once you are done typing, press (Ctrl+Enter) to run the code\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If everthing went well, you saw a chat message in Minecraft. You have now written your first program for Minecraft. Jump up and down three times yelling \n",
+    "\n",
+    "**I rock!**\n",
+    "\n",
+    "Now let's see what the lines in your program do.\n",
+    "\n",
+    "* In order to work with minecraft we need other programs that help us connect to our minecraft game. These programs are called libraries. We need the minecraft and time libraries, so we tell our program that we need these libraries by typing\n",
+    "```\n",
+    "import mcpi.minecraft\n",
+    "import time\n",
+    "```\n",
+    "\n",
+    "There are many other libraries we can use in minecraft, some interesting ones being mcpi.blocks which has programs to build with blocks and mcpi.entity which has a list of things like bats, witherskull that you can use in your programs. \n",
+    "\n",
+    "A library has many functions to do things. There is a function to display a message, a function to play music files and so on. \n",
+    "\n",
+    "* We need a minecraft _object_ to connect to our game so we create minecraft object by typing\n",
+    "```\n",
+    "mc = minecraft.Minecraft.create()\n",
+    "```\n",
+    "\n",
+    "The minecraft object has many functions. When a function is tied to an object is is also called a _method_. We need the _postToChat_ to display a message, so we type ```mc.postToChat(...)```.\n",
+    "\n",
+    "Now try to complete the tasks below in this adventure.\n",
+    "\n",
+    "** Good luck! **"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Task 1\n",
+    "Write a program to display ** Hi Brooks School ** in Minecraft"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Program for Adeventure 1 - Task 1\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Task 2\n",
+    "Write a program to display a countdown from 5,4,3,2,1\n",
+    "\n",
+    "_Hint: use timer.sleep(1) to pause for 1 second between displaying numbers "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "# Program for Adeventure 1 - Task 2\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
