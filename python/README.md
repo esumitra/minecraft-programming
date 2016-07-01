@@ -9,3 +9,6 @@ Index of python programs
 * [KeepOut.py](./KeepOut.py) Guarding the treasure with geo-fencing (2D coordinate system, functions)
 
 * [BuildingBlocks.py](./BuildingBlocks.py) Stone Portals (3d coordinate system)
+
+* [Bridge.py](./Bridge.py) Building Bridges (conditions, logical operators)
+
