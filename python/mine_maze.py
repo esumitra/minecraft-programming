@@ -4,15 +4,6 @@ import mcpi.block as block
 import time
 import numpy as np
 import random
-
-def static_maze():
-    return np.array([[1,1,1,1,1,1,1],
-                     [0,0,0,0,0,0,1],
-                     [1,1,1,1,1,0,1],
-                     [1,0,0,0,1,0,1],
-                     [1,0,1,1,1,0,1],
-                     [1,0,0,0,0,0,1],
-                     [1,1,1,1,1,1,1]])
     
 # maze to minecraft grid
 def maze2grid(maze):
