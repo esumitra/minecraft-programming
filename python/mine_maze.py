@@ -117,6 +117,7 @@ def build_maze_grid(mc,my_pos,maze):
                 b = WALL
             mc.setBlock(x,origin_y,z,b)
             mc.setBlock(x,origin_y+1,z,b)
+            mc.setBlock(x,origin_y+2,z,b)
             mc.setBlock(x,origin_y-1,z,FLOOR)
             x = x+1 
         z = z+1
