@@ -8,8 +8,9 @@ Index of python programs
 
 * [Bridge.py](./Bridge.py) Building Bridges (conditions, logical operators, functions)
 
+* [BuildingBlocks.py](./BuildingBlocks.py) Stone Portals (3d coordinate system)
+
 * [KeepOut.py](./KeepOut.py) Guarding the treasure with geo-fencing (2D coordinate system, functions)
 
-* [BuildingBlocks.py](./BuildingBlocks.py) Stone Portals (3d coordinate system)
 
 
