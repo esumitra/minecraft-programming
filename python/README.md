@@ -11,6 +11,3 @@ Index of python programs
 * [BuildingBlocks.py](./BuildingBlocks.py) Stone Portals (3d coordinate system)
 
 * [KeepOut.py](./KeepOut.py) Guarding the treasure with geo-fencing (2D coordinate system, functions)
-
-
-
