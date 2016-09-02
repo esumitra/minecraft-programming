@@ -124,16 +124,14 @@ def build_maze_grid(mc,my_pos,maze):
         x = origin_x+2
 
 # minecraft maze builder
-def mine_maze():
-    num_rows = 5
-    num_cols = 5
+def mine_maze(num_rows=5, num_cols=5):
     mc = minecraft.Minecraft.create()
+    pos = mc.player.getTilePos()
     mc.postToChat("building maze in 5 seconds ...")
     time.sleep(4)
     mc.postToChat("building maze in 1 second ...")
     time.sleep(1)
     g = maze2grid(generate_maze(num_rows, num_cols))
-    pos = mc.player.getTilePos()
     build_maze_grid(mc,pos, g)
     mc.postToChat("Maze built!")
 
