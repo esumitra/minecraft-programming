@@ -6,9 +6,10 @@ import minecraftstuff as minecraftstuff
 import numpy as np
 
 # Circles and Spheres
-# requires mc and mcdrawing global vars to be defined as follows
-# mc = minecraft.Minecraft.create()
-# mcdrawing = minecraftstuff.MinecraftDrawing(mc)
+# requires mc and mcdrawing to be defined as follows
+# TODO: pass in mc and make drawings a class that is initialized with mc created in notebook
+mc = minecraft.Minecraft.create()
+mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 
 def drawMyCircle(radius=5,blockId=block.WOOD.id):
     pos = mc.player.getTilePos()
@@ -74,6 +75,7 @@ def drawSolid(shape,length=5,blockId=block.DIAMOND_BLOCK.id,
 
 
 # Platonic Solids definitions
+# v = vertices, f = faces
 Solids["TETRAHEDRON"] = {"v": np.array([  [1,1,1],
                                           [1,-1,-1],
                                           [-1,1,-1],
@@ -82,6 +84,8 @@ Solids["TETRAHEDRON"] = {"v": np.array([  [1,1,1],
                                         [0,1,3],
                                         [0,2,3],
                                         [1,2,3]])}
+
+# non-Platonic solids
 Solids["PYRAMID"] = {"v": np.array([  [0,1,0],
                                       [-1,0,1],
                                       [-1,0,-1],
