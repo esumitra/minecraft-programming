@@ -11,6 +11,13 @@ import numpy as np
 mc = minecraft.Minecraft.create()
 mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 
+# functions and variables/constants
+phi = 1.67
+Solids = {}
+def compose(*functions):
+    return reduce(lambda f, g: lambda x: f(g(x)), functions, lambda x: x)
+
+# circle drawing functions
 def drawMyCircle(radius=5,blockId=block.WOOD.id):
     pos = mc.player.getTilePos()
     mcdrawing.drawCircle(pos.x,
@@ -49,7 +56,6 @@ def facePoints2Vec(fp):
 def shapesFromPoints(v, facePoints, transformFn = lambda x: x):
     return [facePoints2Vec(map(lambda i: transformFn(v[i]), fp)) for fp in facePoints]
 
-Solids = {}
 
 # TODO
 # calculate number of edges and verify
@@ -67,6 +73,19 @@ def drawSolid(shape,length=5,blockId=block.DIAMOND_BLOCK.id,
     v = length * Solids[shape]["v"]
     f = Solids[shape]["f"]
     transformFn = lambda p: map(sum,zip(p,base)) # translate to current pos
+    faces = shapesFromPoints(v,f,transformFn)
+    
+    # draw or print solid coordinates
+    for face in faces:
+        drawFn(face, blockId)
+
+def drawShape(shape,length=5,blockId=block.DIAMOND_BLOCK.id,
+             originFn = lambda: map(sum,zip(list(mc.player.getTilePos()),[0,25,0])),
+              drawFn = lambda f,bid: mcdrawing.drawFace(f, False, bid)):
+    base = originFn()
+    v = length * Solids[shape]["v"]
+    f = Solids[shape]["f"]
+    transformFn = lambda p: map(compose(int,sum),zip(p,base)) # translate to current pos, ints needed?
     faces = shapesFromPoints(v,f,transformFn)
     
     # draw or print solid coordinates
