@@ -12,7 +12,7 @@ mc = minecraft.Minecraft.create()
 mcdrawing = minecraftstuff.MinecraftDrawing(mc)
 
 # functions and variables/constants
-phi = 1.67
+phi = 1.618
 Solids = {}
 def compose(*functions):
     return reduce(lambda f, g: lambda x: f(g(x)), functions, lambda x: x)
@@ -133,6 +133,42 @@ Solids["CUBE"] = {"v": np.array([[1,1,1],
                                  [1,2,6,5],
                                  [2,3,7,6],
                                  [0,1,5,4]])}
+
+Solids["DODECAHEDRON"] = {
+    "v": np.array([
+        [0,1.0/phi,phi],
+        [1,1,1],
+        [phi,0,1.0/phi],
+        [1,-1,1],
+        [0,-1.0/phi,phi],
+        [-1,-1,1],
+        [-1.0/phi,-phi,0],
+        [1.0/phi,-phi,0],
+        [1,-1,-1],
+        [phi,0,-1.0/phi],
+        [1,1,-1],
+        [1.0/phi,phi,0],
+        [-1.0/phi,phi,0],
+        [-1,1,-1],
+        [0,1.0/phi,-phi],
+        [-1,1,1],
+        [-phi,0,1.0/phi],
+        [-phi,0,-1.0/phi],
+        [-1,-1,-1],
+        [0,-1.0/phi,-phi]]),
+    "f": np.array([
+        [0,1,2,3,4],
+        [4,5,6,7,3],
+        [2,3,7,8,9],
+        [0,1,11,12,15],
+        [1,2,9,10,11],
+        [8,9,10,14,19],
+        [0,4,5,16,15],
+        [5,6,18,17,16],
+        [6,7,8,19,18],
+        [10,11,12,13,14],
+        [12,13,17,16,15],
+        [13,14,19,18,17]])}
 
 # non-Platonic solids
 Solids["PYRAMID"] = {"v": np.array([  [0,1,0],
