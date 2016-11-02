@@ -72,7 +72,7 @@ def drawSolid(shape,length=5,blockId=block.DIAMOND_BLOCK.id,
     base = originFn()
     v = length * Solids[shape]["v"]
     f = Solids[shape]["f"]
-    transformFn = lambda p: map(sum,zip(p,base)) # translate to current pos
+    transformFn = lambda p: map(compose(int,sum),zip(p,base)) # translate to current pos
     faces = shapesFromPoints(v,f,transformFn)
     
     # draw or print solid coordinates
