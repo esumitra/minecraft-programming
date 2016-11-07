@@ -11,7 +11,6 @@ import threading
 import numpy as np
 import copy
 import itertools
-import matplotlib as mpl
 import scipy.spatial.distance as sd
 
 # -----------------
